@@ -8,6 +8,8 @@ public class Player : LivingObject
 
     public float score;
     public float bombCount;
+    public bool cheated = false;
+    [HideInInspector] public bool isEnded = false;
 
     [SerializeField] BulletHell.ProjectileEmitterAdvanced emittor;
 
@@ -24,26 +26,49 @@ public class Player : LivingObject
         sprite = GetComponent<SpriteRenderer>();
         hp = 10;
         atk = 1;
+        bombCount = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        InvincibleAnimation();
-        ApplyPower();
+        if(!isEnded)
+        {
+            liveTime += Time.deltaTime;
+            InvincibleAnimation();
+            ApplyPower();
 
-        // cheat
-        if(Input.GetKeyDown(KeyCode.F12))
-        {
-            hp++;
-        }
-        if(hp > 0 && Input.GetKeyDown(KeyCode.F11))
-        {
-            Time.timeScale = 0.2f;
-        }
-        else if(hp > 0 && Input.GetKeyUp(KeyCode.F11))
-        {
-            Time.timeScale = 1f;
+            if(bombCount > 0 && Input.GetKeyDown(KeyCode.Space))
+            {
+                BulletHell.ProjectileManager.Instance.RefreshEmitters();
+                bombCount--;
+            }
+
+            // cheat
+            if(Input.GetKeyDown(KeyCode.F12))
+            {
+                hp++;
+                cheated = true;
+            }
+            if(Input.GetKeyDown(KeyCode.F11))
+            {
+                bombCount++;
+                cheated = true;
+            }
+            if(Input.GetKeyDown(KeyCode.F10))
+            {
+                atk++;
+                cheated = true;
+            }
+            if(hp > 0 && Input.GetKeyDown(KeyCode.CapsLock))
+            {
+                Time.timeScale = 0.2f;
+                cheated = true;
+            }
+            else if(hp > 0 && Input.GetKeyUp(KeyCode.CapsLock))
+            {
+                Time.timeScale = 1f;
+            }
         }
     }
 
@@ -53,6 +78,11 @@ public class Player : LivingObject
         {
             invincibleTime = 1.5f;
             hp -= 1;
+
+            if(hp <= 0)
+            {
+                LoseScreen.GameOver();
+            }
         }
     }
 

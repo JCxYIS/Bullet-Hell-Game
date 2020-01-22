@@ -113,7 +113,7 @@ namespace BulletHell
 
         // Only should be used in DEBUG mode when adding Emitters during runtime
         // This rebuilds the entire Emitters array -- If adding emitters at runtime you should use the AddEmitter method.
-        private void RefreshEmitters()
+        public void RefreshEmitters()
         {
         
             ProjectileEmitterBase[] emittersTemp = GameObject.FindObjectsOfType<ProjectileEmitterBase>();

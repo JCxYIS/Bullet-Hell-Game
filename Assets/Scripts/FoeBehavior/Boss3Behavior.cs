@@ -37,9 +37,9 @@ public class Boss3Behavior : FoeMovement
             ULTIMATEATTACK.enabled = true;
             GameManager.instance.MakeFoe("Group3");
             GameManager.instance.MakeFoe("Foe1");
-            p.hp += 10f;
+            p.bombCount += 5f;
             p.atk += 10f;
-            f.hp += 7777f;
+            f.hp += 48763f;
             if(f.hp > f.hpmax)
                 f.hp = f.hpmax;         
             yield return new WaitForSeconds(3);

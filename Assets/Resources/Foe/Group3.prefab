@@ -128,7 +128,7 @@ MonoBehaviour:
   atk: 1
   liveTime: 0
   isBoss: 0
-  hpmax: 40
+  hpmax: 666
 --- !u!114 &4104437381300904550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
   atk: 1
   liveTime: 0
   isBoss: 0
-  hpmax: 40
+  hpmax: 666
 --- !u!114 &8618059551877133961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,7 +769,7 @@ MonoBehaviour:
   atk: 1
   liveTime: 0
   isBoss: 0
-  hpmax: 40
+  hpmax: 666
 --- !u!114 &8618059552887406646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,7 +1018,7 @@ MonoBehaviour:
   atk: 1
   liveTime: 0
   isBoss: 0
-  hpmax: 40
+  hpmax: 666
 --- !u!114 &8618059553199341378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   atk: 1
   liveTime: 0
   isBoss: 0
-  hpmax: 40
+  hpmax: 666
 --- !u!114 &8618059553234058883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,7 +1304,7 @@ MonoBehaviour:
   atk: 1
   liveTime: 0
   isBoss: 0
-  hpmax: 40
+  hpmax: 666
 --- !u!114 &8618059553433834670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1765,7 +1765,7 @@ MonoBehaviour:
   atk: 1
   liveTime: 0
   isBoss: 0
-  hpmax: 40
+  hpmax: 666
 --- !u!114 &8618059553908454237
 MonoBehaviour:
   m_ObjectHideFlags: 0

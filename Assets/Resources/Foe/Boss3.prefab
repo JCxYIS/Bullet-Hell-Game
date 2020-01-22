@@ -696,7 +696,7 @@ MonoBehaviour:
   atk: 1
   liveTime: 0
   isBoss: 1
-  hpmax: 99999
+  hpmax: 202020
 --- !u!114 &6368622105507212647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,7 +789,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 7
     m_NumAlphaKeys: 2
-  INTERVAL: 0.001
+  INTERVAL: 0.02
   Speed: 8.763
   Acceleration: 0
   Scale: 0.5

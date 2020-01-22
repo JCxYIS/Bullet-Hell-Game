@@ -1,7 +1,9 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Foe: LivingObject
 {
+    public static List<Foe> foes = new List<Foe>();
     public bool isBoss;
     public float hpmax;
 
@@ -10,6 +12,7 @@ public class Foe: LivingObject
 
     void Start()
     {
+        foes.Add(this);
         if(isBoss)
             GameUI.boss = this;
 
@@ -18,9 +21,9 @@ public class Foe: LivingObject
     }
     void Update()
     {
-        if(hp < 0)
+        if(hp <= 0)
         {
-            hp = 0;
+            foes.Remove(this);
 
             transform.position = new Vector3(9999,9999,0);
             this.enabled = false;

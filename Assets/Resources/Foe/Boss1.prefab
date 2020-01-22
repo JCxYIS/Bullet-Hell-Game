@@ -128,7 +128,7 @@ MonoBehaviour:
   atk: 1
   liveTime: 0
   isBoss: 1
-  hpmax: 999
+  hpmax: 2020
 --- !u!114 &3705076329007649936
 MonoBehaviour:
   m_ObjectHideFlags: 0

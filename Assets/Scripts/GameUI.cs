@@ -12,6 +12,9 @@ public class GameUI : MonoBehaviour
     [SerializeField] Text bombLab;
     [SerializeField] Text powerLab;
     [SerializeField] Text timeLab;
+    [SerializeField] Text reviveTab;
+
+    [SerializeField] GameObject cheatedLab;
 
     [SerializeField] CanvasGroup bossBarArea;
     [SerializeField] Slider bossBar;
@@ -29,23 +32,32 @@ public class GameUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        maxScoreLab.text = 0.ToString("000000000");
+        maxScoreLab.text = GameFlowManager.hiScore.ToString("000000000");
         scoreLab.text = player.score.ToString("000000000");
         hpLab.text = player.hp.ToString("0");
         bombLab.text = player.bombCount.ToString("0");
+        reviveTab.text = LoseScreen.continueTime.ToString("0");
         powerLab.text = player.atk.ToString("0");
         timeLab.text = player.liveTime.ToString("0.0") + "s";
+        if(player.cheated)
+            cheatedLab.SetActive(true);
+        else
+            cheatedLab.SetActive(false);
 
         if(isBossAlive())
         {
             if(bossBarArea.alpha < 1)
                 bossBarArea.alpha += 1f * Time.deltaTime;
 
+            if(boss.hp < 0)
+                boss.hp = 0;
             bossHPLab.text = boss.hp.ToString("0");
             bossBar.value = (boss.hp / boss.hpmax);
         }
         else
         {
+            bossHPLab.text = "0";
+            bossBar.value = 0;
             if(bossBarArea.alpha > 0)
                 bossBarArea.alpha -= 0.6f * Time.deltaTime;
         }

@@ -14,11 +14,11 @@ public class Boss2Behavior : FoeMovement
         Foe f = GetComponent<Foe>();
         while(true)
         {
-            f.hp += f.hpmax / 3f;
+            f.hp += f.hpmax / 8f;
             speedScale += 0.25f;
             if(f.hp > f.hpmax)
                 f.hp = f.hpmax;
-            yield return new WaitForSeconds(6.66f);
+            yield return new WaitForSeconds(9.99f);
         }
     }
 }

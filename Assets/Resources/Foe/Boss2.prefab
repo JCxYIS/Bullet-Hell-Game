@@ -128,7 +128,7 @@ MonoBehaviour:
   atk: 1
   liveTime: 0
   isBoss: 1
-  hpmax: 5487
+  hpmax: 20202
 --- !u!114 &2590982532767228543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  INTERVAL: 0.1
+  INTERVAL: 0.3
   Speed: 8.7
   Acceleration: 0
   Scale: 0.5
@@ -471,7 +471,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  INTERVAL: 0.1
+  INTERVAL: 0.3
   Speed: 8.7
   Acceleration: 0
   Scale: 0.5
@@ -577,7 +577,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  INTERVAL: 0.1
+  INTERVAL: 0.3
   Speed: 2
   Acceleration: 0
   Scale: 0.125
@@ -683,7 +683,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  INTERVAL: 0.1
+  INTERVAL: 0.3
   Speed: 2
   Acceleration: 0
   Scale: 0.125
@@ -789,7 +789,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  INTERVAL: 0.1
+  INTERVAL: 0.3
   Speed: 8.7
   Acceleration: 0
   Scale: 0.5
@@ -895,7 +895,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  INTERVAL: 0.1
+  INTERVAL: 0.3
   Speed: 2
   Acceleration: 0
   Scale: 0.125
@@ -1001,7 +1001,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  INTERVAL: 0.1
+  INTERVAL: 0.3
   Speed: 8.7
   Acceleration: 0
   Scale: 0.5
@@ -1107,7 +1107,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  INTERVAL: 0.1
+  INTERVAL: 0.3
   Speed: 2
   Acceleration: 0
   Scale: 0.125

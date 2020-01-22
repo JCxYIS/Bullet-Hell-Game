@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float movespeed;
-
+    [SerializeField] SpriteRenderer hitbox;
 
 
     // Start is called before the first frame update
@@ -38,6 +38,16 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey(KeyCode.RightArrow))
         {
             shouldMove.x = movespeed;
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            shouldMove *= 0.6f;
+            hitbox.enabled = true;
+        }
+        else
+        {
+            hitbox.enabled = false;
         }
 
         transform.Translate(shouldMove * Time.deltaTime);
