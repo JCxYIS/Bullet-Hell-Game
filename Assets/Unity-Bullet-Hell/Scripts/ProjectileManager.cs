@@ -115,6 +115,7 @@ namespace BulletHell
         // This rebuilds the entire Emitters array -- If adding emitters at runtime you should use the AddEmitter method.
         private void RefreshEmitters()
         {
+        
             ProjectileEmitterBase[] emittersTemp = GameObject.FindObjectsOfType<ProjectileEmitterBase>();
 
             if (emittersTemp.Length != EmitterCount)
@@ -276,9 +277,8 @@ namespace BulletHell
             // Provides a simple way to update active Emitters if removing/adding them at runtime for debugging purposes
             // You should be using AddEmitter() if you want to add Emitters at runtime
 #if UNITY_EDITOR
-            RefreshEmitters();
+            //RefreshEmitters();
 #endif
-
             UpdateEmitters();
             DrawEmitters();
             ResolveLeakedTime();

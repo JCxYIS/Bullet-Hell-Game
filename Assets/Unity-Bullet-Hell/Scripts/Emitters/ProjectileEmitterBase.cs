@@ -56,6 +56,11 @@ namespace BulletHell
         Plane[] Planes = new Plane[6];
         private Camera Camera;
 
+
+        [Header("My VAR!")]
+        public float atk = 1;
+        public string shooterTag; // to ignore
+
         public void Awake()
         {
             Camera = Camera.main;
@@ -179,13 +184,26 @@ namespace BulletHell
                         }
 
 
+                        if( result > 0 )
+                        {
+                            if(RaycastHitBuffer.Length == 1)
+                                if(RaycastHitBuffer[0].collider.gameObject.tag == "NotForBullet" || 
+                                RaycastHitBuffer[0].collider.gameObject.tag == shooterTag)
+                                    result = -1;
+                        }
+
                         if (result > 0)
                         {
                             // Put whatever hit code you want here such as damage events 
                             if(RaycastHitBuffer.Length > 1)
                             {
                                 Debug.LogWarning("[彈幕系統]超過一個Raycast目標!");
-                            } 
+                            }                             
+
+                            if(RaycastHitBuffer[0].collider.GetComponent<LivingObject>() )
+                            {
+                                RaycastHitBuffer[0].collider.GetComponent<LivingObject>().GetHurt(atk);
+                            }
                             
 
                             // Collision was detected, should we bounce off or destroy the projectile?

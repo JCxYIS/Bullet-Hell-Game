@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f0bbd617478444e885e632f29f78dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BufferIndex: 363
+  BufferIndex: 353
   Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   Material: {fileID: 2100000, guid: 97f4f3c99dabeb643ab4fb800af62e7c, type: 2}
-  MaxProjectileCount: 100000
+  MaxProjectileCount: 3000000
   ActiveProjectileCount: 0
