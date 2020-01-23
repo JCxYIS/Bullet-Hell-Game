@@ -9,5 +9,5 @@
 - F10/F11/F12：(*作弊*) 增加Bomb/Life/Power
 
 ## 相關連結
-- Release: https://github.com/JCxYIS/Bullet-Hell-Game/releases
-- Project Intro: https://hackmd.io/@JCxYIS/ByAE8SHbI
+- 下載: https://github.com/JCxYIS/Bullet-Hell-Game/releases
+- 專案資訊: https://hackmd.io/@JCxYIS/ByAE8SHbI
